@@ -1,0 +1,1 @@
+{"virtualbox":{"/var/www/html":{"guestpath":"/var/www/html","hostpath":"/Users/anapiazza/Desktop/SSL/Archive_f3a2e113-d4da-42ce-ab58-b2c23fe8aaf3","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/anapiazza/Desktop/SSL/Archive_f3a2e113-d4da-42ce-ab58-b2c23fe8aaf3","disabled":false,"__vagrantfile":true}}}
