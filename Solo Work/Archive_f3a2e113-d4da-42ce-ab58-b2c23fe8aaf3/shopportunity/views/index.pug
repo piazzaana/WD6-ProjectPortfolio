@@ -1,0 +1,60 @@
+extends layout
+
+block content
+  style(type='text/css').
+    .wrapper{
+      display: flex;
+    }
+    .card{
+      max-width: calc(100% / 3);
+      margin: 10px;
+    }
+    .card img{
+      max-width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+    .card-text{
+      color: grey;
+    }
+    .price{
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .price-tag{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+  h1= title
+  p Welcome to #{title}
+
+    each product in products
+      div.wrapper
+        div.card
+          img.card-img-top.img-fluid(src="images/chris-liverani-563711-unsplash.jpg" alt="Card image cap")
+          div.card-body
+            h5.card-title Card title
+            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+            div.price-tag
+              div.price $12
+              a.btn.btn-success(href="#") Add to cart
+
+        div.card
+          img.card-img-top.img-fluid(src="images/chris-liverani-563711-unsplash.jpg" alt="Card image cap")
+          div.card-body
+            h5.card-title Card title
+            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+            div.price-tag
+              div.price $12
+              a.btn.btn-success(href="#") Add to cart
+
+        div.card
+          img.card-img-top.img-fluid(src="images/chris-liverani-563711-unsplash.jpg" alt="Card image cap")
+          div.card-body
+            h5.card-title Card title
+            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
+            div.price-tag
+              div.price $12
+              a.btn.btn-success(href="#") Add to cart
