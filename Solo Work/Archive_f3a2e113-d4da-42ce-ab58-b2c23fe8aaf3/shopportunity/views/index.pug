@@ -30,31 +30,15 @@ block content
   h1= title
   p Welcome to #{title}
 
+  ul
     each product in products
       div.wrapper
-        div.card
-          img.card-img-top.img-fluid(src="images/chris-liverani-563711-unsplash.jpg" alt="Card image cap")
-          div.card-body
-            h5.card-title Card title
-            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-            div.price-tag
-              div.price $12
-              a.btn.btn-success(href="#") Add to cart
-
-        div.card
-          img.card-img-top.img-fluid(src="images/chris-liverani-563711-unsplash.jpg" alt="Card image cap")
-          div.card-body
-            h5.card-title Card title
-            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-            div.price-tag
-              div.price $12
-              a.btn.btn-success(href="#") Add to cart
-
-        div.card
-          img.card-img-top.img-fluid(src="images/chris-liverani-563711-unsplash.jpg" alt="Card image cap")
-          div.card-body
-            h5.card-title Card title
-            p.card-text Some quick example text to build on the card title and make up the bulk of the card's content.
-            div.price-tag
-              div.price $12
-              a.btn.btn-success(href="#") Add to cart
+        each item, i in product
+          div.card
+            img.card-img-top.img-fluid(src=item.imagePath)
+            div.card-body
+              h5.card-title=item.title
+              p.card-text=item.description
+              div.price-tag
+                div.price="$"+item.price
+                a.btn.btn-success(href="#") Add to cart
