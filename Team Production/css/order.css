@@ -1,0 +1,40 @@
+.order-detail__roster-table {
+    border: solid 1px rgba(0,0,0,.1);
+    margin-top: 24px;
+    margin-bottom: 24px !important;
+}
+
+.roster-description {
+    clear: both;
+    margin-top: 24px;
+}
+
+.roster-table-cell {
+    border-top: none !important;
+}
+
+.order-detail__roster-table thead tr {
+        background-color: rgba(237, 28, 82, .2);
+}   
+
+
+.roster-form--submitted button,
+.order-detail-msg--submitted,
+.roster-form--submitted .order-detail-msg--required {
+    display: none;
+}
+
+.roster-form--submitted .order-detail-msg--submitted {
+    display: block;
+}
+
+.roster-form--submitted select {
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.roster-form--submitted input {
+    border: none;
+}

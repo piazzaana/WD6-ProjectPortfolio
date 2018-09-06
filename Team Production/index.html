@@ -1,0 +1,561 @@
+
+<!DOCTYPE>
+<html lang="en-US">
+<head profile="http://www.w3.org/2005/10/profile">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>BasketBall</title>
+
+
+    <link rel="stylesheet" href="css/normalize.css" />
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
+    <link href="css/main.css" media="screen" type="text/css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/jquery-ui-1.8.13.custom.css" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/responsive.css" />
+
+
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "http:\/\/***Sites Link***\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.7"
+            }
+        };
+        ! function(a, b, c) {
+            function d(a) {
+                var b, c, d, e, f = String.fromCharCode;
+                if (!k || !k.fillText) return !1;
+                switch (k.clearRect(0, 0, j.width, j.height), k.textBaseline = "top", k.font = "600 32px Arial", a) {
+                    case "flag":
+                        return k.fillText(f(55356, 56826, 55356, 56819), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 56826, 8203, 55356, 56819), 0, 0), c = j.toDataURL(), b !== c && (k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447), 0, 0), b = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447), 0, 0), c = j.toDataURL(), b !== c);
+                    case "emoji4":
+                        return k.fillText(f(55358, 56794, 8205, 9794, 65039), 0, 0), d = j.toDataURL(), k.clearRect(0, 0, j.width, j.height), k.fillText(f(55358, 56794, 8203, 9794, 65039), 0, 0), e = j.toDataURL(), d !== e
+                }
+                return !1
+            }
+
+            function e(a) {
+                var c = b.createElement("script");
+                c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+            var f, g, h, i, j = b.createElement("canvas"),
+                k = j.getContext && j.getContext("2d");
+            for (i = Array("flag", "emoji4"), c.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, h = 0; h < i.length; h++) c.supports[i[h]] = d(i[h]), c.supports.everything = c.supports.everything && c.supports[i[h]], "flag" !== i[h] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[i[h]]);
+            c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function() {
+                c.DOMReady = !0
+            }, c.supports.everything || (g = function() {
+                c.readyCallback()
+            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", g, !1), a.addEventListener("load", g, !1)) : (a.attachEvent("onload", g), b.attachEvent("onreadystatechange", function() {
+                "complete" === b.readyState && c.readyCallback()
+            })), f = c.source || {}, f.concatemoji ? e(f.concatemoji) : f.wpemoji && f.twemoji && (e(f.twemoji), e(f.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+
+    <style id='woocommerce-layout-inline-css' type='text/css'>
+        .infinite-scroll .woocommerce-pagination {
+            display: none;
+        }
+    </style>
+
+    <link rel='stylesheet' id='woocommerce-smallscreen-css' href="css/woocommerce-smallscreen.css" type='text/css' media='only screen and (max-width: 768px)' />
+
+    <link rel='stylesheet' id='woocommerce-general-css' href="css/woocommerce.css" type='text/css' media='all' />
+
+    <link rel='stylesheet' id='wc-composite-css-css' href="css/wc-composite-styles.css" type='text/css' media='all' />
+
+    <link rel='stylesheet' id='style-update-css' href="css/style-update.css" type='text/css' media='all' />
+
+    <link rel='stylesheet' id='order-css' href="css/order.css" type='text/css' media='all' />
+
+    <link rel='stylesheet' id='style-simple-css' href="css/style-simple.css" type='text/css' media='all' />
+
+    <link rel='stylesheet' id='promo-css-css' href="css/asw.css" type='text/css' media='all' />
+
+    <link rel='stylesheet' id='promo-desktop-css' href="css/desktop.css" type='text/css' media='all' />
+
+    <script type='text/javascript' src="js/jquery.js"></script>
+
+    <script type='text/javascript' src="js/jquery-migrate.min.js"></script>
+
+    <!--    <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>-->
+
+    <style type="text/css">
+        .recentcomments a {
+            display: inline !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var switchTo5x = true;
+    </script>
+
+</head>
+
+<body class="page-template-default page page-id-8123">
+    <div id="fb-root"></div>
+    <div class="nav__header">
+
+        <header class="nav-content">
+            <ul class="header-contact">
+                <li class="header-contact__item"><i class="fa fa-phone"></i><a href="tel:407-641-4900" class="header-contact__phone">Mobile Number</a>
+                </li>
+                <li class="header-contact__item header-contact__item--chat">Live Chat
+                    <span class="online-indicator__offline"></span>Offline
+                </li>
+            </ul>
+        </header>
+
+        <nav class="nav-content">
+            <a href="/"><img src="images/logo_2.png" class="nav__logo"/></a>
+
+            <div class="nav__menu-mobile">
+                <label class="nav__menu-mobile__label">MENU</label>
+
+                <div class="nav__menu-mobile_symbol">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            <ul id="menu-header_menu" class="nav__menu">
+                <li class="menu-item-hidemobile menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-0"><span class="menu-item-nolink">Shop Sports<span class="fa fa-chevron-down menu-item-chevron"></span></span><span class="fa fa-plus menu-item-plus"></span><span class="fa fa-minus menu-item-subtract"></span>
+                    <ul class="subnav__menu">
+                        <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1"><span class="menu-item-nolink">Basketball</span><span class="fa fa-plus menu-item-plus"></span><span class="fa fa-minus menu-item-subtract"></span>
+                            <ul class="tertiary__menu">
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">BASKETBALL HOME</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Men's Basketball</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Women's Basketball</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Youth Basketball Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Sublimated Basketball Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Reversible Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Warm-Ups</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Shooter Shirts</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Basketball Stock</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Basketball Team Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1"><span class="menu-item-nolink">Football</span><span class="fa fa-plus menu-item-plus"></span><span class="fa fa-minus menu-item-subtract"></span>
+                            <ul class="tertiary__menu">
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">FOOTBALL HOME</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Pro Football Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#/" class="menu-item-link">Football Jerseys</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Sublimated Football Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Football Stock</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Compression Gear</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Flag Football Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Sublimated Flag Football</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Football Team Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1"><span class="menu-item-nolink">Baseball</span><span class="fa fa-plus menu-item-plus"></span><span class="fa fa-minus menu-item-subtract"></span>
+                            <ul class="tertiary__menu">
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">BASEBALL HOME</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Baseball Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Baseball Jerseys</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Sublimated Baseball Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Baseball Stock</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Baseball Team Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1"><span class="menu-item-nolink">Softball</span><span class="fa fa-plus menu-item-plus"></span><span class="fa fa-minus menu-item-subtract"></span>
+                            <ul class="tertiary__menu">
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">SOFTBALL HOME</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Softball Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-2"><a href="#" class="menu-item-link">Softball Jerseys</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Sublimated Softball Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Softball Stock</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Softball Team Packages</a></li>
+                            </ul>
+                        </li>
+                        <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1"><span class="menu-item-nolink">Cheer</span><span class="fa fa-plus menu-item-plus"></span><span class="fa fa-minus menu-item-subtract"></span>
+                            <ul class="tertiary__menu">
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Cheer Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Custom Cheerleading Uniforms</a></li>
+                                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-2"><a href="#" class="menu-item-link">Stock Cheerleading Uniforms</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="home__help-box--quote menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-0"><a href="#" class="menu-item-link">Quick Quote</a></li>
+                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-0"><a href="#" class="menu-item-link">Promos</a></li>
+                <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-0"><a href="#" class="menu-item-link">Uniform Builder</a></li>
+                <li class="menu-item--signin menu-item menu-item-type-custom menu-item-object-custom menu-item-0"><a href="#" class="menu-item-link"><span class="fa fa-user menu-item--signin-icon"></span>Sign In</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <!--- END The Existing Index ---->
+    <div class="template-body">
+        <p><a id="hero-quick-quote"></a>
+            <section class="hero--large left hero--brand">
+                <div class="hero__container" style="background-image: url(images/background.jpeg);">
+                    <div class="hero__content">
+                        <span class="hero__eyebrow">Feel Like All Stars</span>
+
+                        <h3 class="hero__headline">As You Take The Court In Style</h3>
+
+                        <p class="hero__subtext">Check out Our Limited Offers and Team Packages</p>
+                    </div>
+                </div>
+                <div class="hero__form">
+                    <form class="quote-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="post">
+                        <div class="quote-form-field">
+                            <input name="first_name" type="text" class="quote-form-input" required placeholder="Name" />
+                            <span class="quote-form-required">required</span>
+                        </div>
+                        <div class="quote-form-field">
+                            <input type="email" name="email" class="quote-form-input" required placeholder="Email" />
+                            <span class="quote-form-required">required</span>
+                        </div>
+                        <div class="quote-form-field">
+                            <input type="text" name="phone" class="quote-form-input" required placeholder="Phone" />
+                            <span class="quote-form-required">required</span>
+                        </div>
+                        <div class="quote-form-field">
+                            <select id="00NE0000002ANme" name="00NE0000002ANme" title="Sport" class="quote-form-input" required>
+                        <option>Sport</option><option value="Basketball" selected>Basketball</option><option value="Football" >Football</option><option value="Flag Football" >Flag Football</option><option value="Baseball" >Baseball</option><option value="Softball" >Softball</option><option value="Volleyball" >Volleyball</option><option value="Lacrosse" >Lacrosse</option><option value="Soccer" >Soccer</option><option value="Other" >Other</option></select>
+                            <span class="quote-form-required">required</span>
+                        </div>
+                        <div class="quote-form-field quote-form-field--description">
+                            <textarea placeholder="Description" name="description" class="quote--description-field"></textarea>
+                        </div>
+
+                        <div id="quick-quote-form-inline"></div><br><button type="submit" class="cta quick-quote__cta" disabled>Submit</button>
+                    </form>
+                </div>
+
+            </section>
+            <div class="content-well">
+                <div class="content-well_body">
+                    <div class="content-well_title"> </div>
+                    <div class="content-well_description">
+                        <h1>BASKETBALL PROMOTIONS</h1>
+                        <p>&nbsp;</p>
+                        <p><span style="font-size: xx-large; color: #ff0000;"><strong>BACK TO SCHOOL SAVINGS!</strong></span></p>
+                        <p>Every team has a unique look. Our playbook is built to find the perfect uniforms in your budget!</p>
+                        <p>SELECT THE TEAM PACKAGE THAT WORKS BEST FOR YOU!<br />
+                    </div>
+                    <div class="content-well_cta"><a class="content-well_cta-link" href=""></a></div>
+                </div>
+            </div>
+            <div class="panel_divider"></div>
+            <div class="image-panel--2-up--spaced">
+                <div class="image-panel">
+                    <div class="image-panel_image-container"><img alt="image" class="image-panel_image" src="images/mid_bg%20(1).jpeg" />
+                        <img alt="image" class="image-panel_image image-panel_image--medium" src="images/mid_bg%20(1).jpeg" />
+                        <img alt="image" class="image-panel_image image-panel_image--large" src="images/mid_bg%20(1).jpeg" />
+                        <img alt="image" class="image-panel_image image-panel_image--xl" src="images/mid_bg%20(1).jpeg" /></div>
+                    <div class="image-panel_content">
+                        <div>
+                            <div class="image-panel_title">Play with your heart</div>
+                            <div class="image-panel_description">When you buy Reversible Basketball Uniforms<br />
+                            </div>
+                            <div class="image-panel_cta"><a class="cta" href="#">QUICK QUOTE</a><a class="cta--secondary" href="#">CUSTOMIZE</a> </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-panel">
+                    <div class="image-panel_image-container"><img alt="image" class="image-panel_image" src="images/mid1_bg(3).jpg" />
+                        <img alt="image" class="image-panel_image image-panel_image--medium" src="images/mid1_bg(3).jpg" />
+                        <img alt="image" class="image-panel_image image-panel_image--large" src="images/mid1_bg(3).jpg" />
+                        <img alt="image" class="image-panel_image image-panel_image--xl" src="images/mid1_bg(3).jpg" /></div>
+                    <div class="image-panel_content">
+                        <div>
+                            <div class="image-panel_title">50% off on Shooter Shirts! </div>
+                            <div class="image-panel_description">When you buy Reversible Basketball Uniforms<br />
+                            </div>
+                            <div class="image-panel_cta"><a class="cta" href="#">QUICK QUOTE</a><a class="cta--secondary" href="#">CUSTOMIZE</a> </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-panel">
+                    <div class="image-panel_image-container"><img alt="$1 Shooter Shirts!" class="image-panel_image" src="images/mid_bg%20(2).jpeg" />
+                        <img alt="$1 Shooter Shirts!" class="image-panel_image image-panel_image--medium" src="images/mid_bg%20(2).jpeg" />
+                        <img alt="$1 Shooter Shirts!" class="image-panel_image image-panel_image--large" src="images/mid_bg%20(2).jpeg" />
+                        <img alt="$1 Shooter Shirts!" class="image-panel_image image-panel_image--xl" src="images/mid_bg%20(2).jpeg" />
+                    </div>
+                    <div class="image-panel_content">
+                        <div>
+                            <div class="image-panel_title">$1 Shooter Shirts!</div>
+                            <div class="image-panel_description"> When you buy Home and Away Basketball Uniforms</div>
+                            <div class="image-panel_cta"><a class="cta" href="#">QUICK QUOTE</a><a class="cta--secondary" href="#">CUSTOMIZE</a> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel_divider"></div>
+            <div class="image-panel">
+                <div class="image-panel_image-container">
+                    <img alt="" class="image-panel_image" src="images/mid2_bg.jpeg" />
+                    <img alt="" class="image-panel_image image-panel_image--medium" src="images/mid2_bg.jpeg" />
+                    <img alt="" class="image-panel_image image-panel_image--large" src="images/mid2_bg.jpeg" />
+                    <img alt="" class="image-panel_image image-panel_image--xl" src="images/mid2_bg.jpeg" />
+                </div>
+                <div class="image-panel_content image-panel_content--right">
+                    <div>
+                        <div class="image-panel_title"></div>
+                        <div class="image-panel_description"></div>
+                        <div class="image-panel_cta"><a class="cta" href="#">GET QUICK QUOTE</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel_divider"></div>
+            <div class="image-panel">
+                <div class="image-panel_image-container">
+                    <img alt="READY-SET-DESIGN" class="image-panel_image" src="images/mid3_bg.jpeg" />
+                    <img alt="READY-SET-DESIGN" class="image-panel_image image-panel_image--medium" src="images/mid3_bg.jpeg" />
+                    <img alt="READY-SET-DESIGN" class="image-panel_image image-panel_image--large" src="images/mid3_bg.jpeg" />
+                    <img alt="READY-SET-DESIGN" class="image-panel_image image-panel_image--xl" src="images/mid3_bg.jpeg" />
+                </div>
+                <div class="image-panel_content image-panel_content--right">
+                    <div>
+                        <div class="image-panel_title">READY-SET-DESIGN</div>
+                        <div class="image-panel_description">IT TAKES A LOT TO BE A CHAMPION. START DRESSING LIKE ONE.</div>
+                        <div class="image-panel_cta"><a class="cta" href="#">Customize</a> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel_divider"></div>
+            <div class="content-well">
+                <div class="content-well_body">
+                    <div class="content-well_cta"><a class="content-well_cta-link" href=""></a></div>
+                </div>
+            </div>
+            <div class="panel_divider"></div>
+    </div>
+
+    <footer>
+        <div class="home__help content">
+            <div class="home__help-box home__help-box--quote">
+                <div class="home__help-box__label">Request a<strong>quick quote</strong></div>
+            </div>
+            <div class="home__help-box home__help-box--chat">
+                <div class="home__help-box__label">
+                    <span class="online-indicator__offline"></span>Offline<strong>Leave a message</strong>
+                </div>
+            </div>
+        </div>
+        <div class="footer-container">
+            <img src="images/logo_2.png" class="footer__logo" />
+            <ul class="footer-contact">
+                <ul id="menu-footer-menu" class="footer__nav">
+                    <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-0"><span class="menu-item-nolink">Our Company</span>
+                        <ul class="footer_nav-group">
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-1"><a href="#" class="menu-item-link">About Us</a></li>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-1"><a href="#" class="menu-item-link">Contact Us</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Press & Events</a></li>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-1"><a href="#" class="menu-item-link">FAQs</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Partners & Affiliates</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Privacy Policy</a></li>
+                        </ul>
+                    </li>
+                    <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-0"><span class="menu-item-nolink">Our Community</span>
+                        <ul class="footer_nav-group">
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">The Huddle Blog</a></li>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-1"><a href="#" class="menu-item-link">Testimonials</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Dress the Champions</a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Fundraising Ideas</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Team Stores</a></li>
+                        </ul>
+                    </li>
+                    <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-0"><span class="menu-item-nolink">Shop Easy</span>
+                        <ul class="footer_nav-group">
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Promos and Discounts</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">FAQs</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Size Charts</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Customization Options</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Terms and Conditions</a></li>
+                        </ul>
+                    </li>
+                    <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-0"><span class="menu-item-nolink">Your Account</span>
+                        <ul class="footer_nav-group">
+                            <li class="menu-item--signin menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link"><span class="fa fa-user menu-item--signin-icon"></span>Account Home</a></li>
+                            <li class="menu-item--signin menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link"><span class="fa fa-user menu-item--signin-icon"></span>Sign In</a></li>
+                            <li class="menu-item--signin menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link"><span class="fa fa-user menu-item--signin-icon"></span>Track your order</a></li>
+                            <li class="menu-item--signin menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link"><span class="fa fa-user menu-item--signin-icon"></span>Saved Designs</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Forms</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Become a Distributor</a></li>
+                            <li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-1"><a href="#" class="menu-item-link">Referral Program</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </ul>
+            <div class="footer__social">
+            </div>
+            <p class="copyright">&copy; CopyRight claim words</p>
+        </div>
+        <div id="comm100-button-535"></div>
+    </footer>
+
+    <section class="quote__modal">
+        <div class="quote__overlay">
+            <div class="quote__modal-content">
+                <span class="quote__modal-close">&times;</span>
+                <h4 class="quote__modal-headline">quick quote</h4>
+                <p class="quote__modal-subtext">Rather we call you? Give us your details and one of our reps will call you ASAP.</p>
+                <form class="quote__modal-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="post">
+                    <div class="quote__modal-form-field">
+                        <input name="first_name" type="text" class="quote__modal-form-input" required placeholder="Name" />
+                        <span class="quote__modal-form-required">required</span>
+                    </div>
+                    <div class="quote__modal-form-field">
+                        <input type="email" name="email" class="quote__modal-form-input" required placeholder="Email" />
+                        <span class="quote__modal-form-required">required</span>
+                    </div>
+                    <div class="quote__modal-form-field">
+                        <input type="text" name="phone" class="quote__modal-form-input" required placeholder="Phone" />
+                        <span class="quote__modal-form-required">required</span>
+                    </div>
+                    <div class="quote__modal-form-field">
+                        <select id="00NE0000002ANme" name="00NE0000002ANme" title="Sport" class="quote__modal-form-input" required>
+                        <option value="">Sport</option>
+                        <option value="Basketball">Basketball</option>
+                        <option value="Football">Football</option>
+                        <option value="Flag Football">Flag Football</option>
+                        <option value="Baseball">Baseball</option>
+                        <option value="Softball">Softball</option>
+                        <option value="Volleyball">Volleyball</option>
+                        <option value="Lacrosse">Lacrosse</option>
+                        <option value="Soccer">Soccer</option>
+                        <option value="Other">Other</option>
+                    </select>
+                        <span class="quote__modal-form-required">required</span>
+                    </div>
+                    <div class="quote__modal-form-field quote__modal-form-field--description">
+                        <textarea placeholder="Description" name="description" class="quote__modal--description-field"></textarea>
+                    </div>
+                    <input type=hidden name='captcha_settings' value='{"keyname":"allensportswear","fallback":"true","orgId":"00DE0000000bB8A","ts":""}'>
+                    <input type=hidden name="oid" value="00DE0000000bB8A">
+                    <input type="hidden" name="lead_source" value=" Website - QQ" />
+                    <input type="hidden" name="recordType" value="01244000000DHhq" />
+                    <input type=hidden name="retURL" value="www.allensportswear.com/thankyou-qq">
+                    <div id="quick-quote-modal-captcha"></div>
+                    <button type="submit" class="quote__modal-form-submit" disabled>Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+        setTimeout(function() {
+
+            var a = document.createElement("script");
+
+            var b = document.getElementsByTagName("script")[0];
+
+            a.src = document.location.protocol + "//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/4153.js?" + Math.floor(new Date().getTime() / 3600000);
+
+            a.async = true;
+
+            a.type = "text/javascript";
+
+            b.parentNode.insertBefore(a, b)
+
+        }, 1);
+    </script>
+
+    <!--Sharing Code-->
+
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var woosb_vars = {
+            "ajax_url": "http:\/\/site_link\/wp-admin\/admin-ajax.php",
+            "alert_text": "Please select some product options before adding this product to your cart.",
+            "bundle_price_text": "",
+            "price_format": "%1$s%2$s",
+            "price_decimals": "2",
+            "price_thousand_separator": ",",
+            "price_decimal_separator": ".",
+            "currency_symbol": "$",
+            "woosb_nonce": "12eae46577"
+        };
+        /* ]]> */
+    </script>
+    
+    <script type='text/javascript' src="js/frontend.js"></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = {
+            "ajax_url": "\/wp-admin\/admin-ajax.php",
+            "wc_ajax_url": "http:\/\/site_link\/?wc-ajax=%%endpoint%%",
+            "i18n_view_cart": "View cart",
+            "cart_url": "http:\/\/site_link\/cart",
+            "is_cart": "",
+            "cart_redirect_after_add": "no"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src="js/add-to-cart.min.js"></script>
+    <script type='text/javascript' src="js/jquery.blockUI.min.js"></script>
+    <script type='text/javascript' src="js/js.cookie.min.js"></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var woocommerce_params = {
+            "ajax_url": "\/wp-admin\/admin-ajax.php",
+            "wc_ajax_url": "http:\/\/site_link\/?wc-ajax=%%endpoint%%"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src="js/woocommerce.min.js"></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = {
+            "ajax_url": "\/wp-admin\/admin-ajax.php",
+            "wc_ajax_url": "http:\/\/site_link\/?wc-ajax=%%endpoint%%",
+            "cart_hash_key": "wc_cart_hash_b9fda5d3cdb4260713e6e8eaa23402a2",
+            "fragment_name": "wc_fragments_b9fda5d3cdb4260713e6e8eaa23402a2"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src="js/cart-fragments.min.js"></script>
+    <script type='text/javascript' src="js/header.js"></script>
+    <script type='text/javascript' src="js/comm100.js"></script>
+    <script type='text/javascript' src="js/js.cookie.min.js"></script>
+    <script type='text/javascript' src='https://www.youtube.com/iframe_api?ver=1.2'></script>
+    <script type='text/javascript' src="js/theme.js"></script>
+    <script type='text/javascript' src="js/blog.js"></script>
+    <script type='text/javascript' src="js/fastforms.js"></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var asw = {
+            "ajax_url": "http:\/\/site_link\/wp-admin\/admin-ajax.php"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src="js/order.js"></script>
+    <script type='text/javascript' src="js/wp-embed.min.js"></script>
+    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"></script>
+    <script type="text/javascript" src="js/footer.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderCaptchas&render=explicit"></script>
+</body>
+
+</html>
