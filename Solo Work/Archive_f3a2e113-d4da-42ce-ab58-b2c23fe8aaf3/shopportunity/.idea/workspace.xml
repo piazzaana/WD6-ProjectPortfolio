@@ -23,10 +23,10 @@
         <counts>
           <entry key="css" value="1" />
           <entry key="express" value="1" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="jpg" value="4" />
           <entry key="js" value="13" />
-          <entry key="json" value="10" />
+          <entry key="json" value="11" />
           <entry key="md" value="1" />
           <entry key="pug" value="6" />
         </counts>
@@ -35,11 +35,11 @@
         <counts>
           <entry key="CSS" value="1" />
           <entry key="Image" value="4" />
-          <entry key="JSON" value="10" />
+          <entry key="JSON" value="11" />
           <entry key="Jade" value="6" />
           <entry key="JavaScript" value="14" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -95,6 +95,14 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
@@ -160,7 +168,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27108000" />
+    <option name="totallyTimeSpent" value="27639000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -218,7 +226,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/express-sessions/node_modules/connect/lib/middleware/methodOverride.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/express-sessions/package.json" />
     <entry file="file://$PROJECT_DIR$/views/index.pug" />
-    <entry file="file://$PROJECT_DIR$/package.json" />
     <entry file="file://$PROJECT_DIR$/app.js" />
     <entry file="file://$PROJECT_DIR$/routes/index.js" />
     <entry file="file://$PROJECT_DIR$/views/signup.pug" />
@@ -227,6 +234,11 @@
         <state relative-caret-position="72">
           <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-350" />
       </provider>
     </entry>
   </component>
