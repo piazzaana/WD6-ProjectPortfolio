@@ -3,7 +3,7 @@ const router = express.Router();
 const csrf = require('csurf');
 const passport = require('passport');
 
-const csrfProtection = csrf();
+let csrfProtection = csrf();
 router.use(csrfProtection);
 
 router.get('/profile', isLoggedIn, function (req, res, next) {
@@ -15,7 +15,7 @@ router.get('/logout', isLoggedIn, function (req, res, next) {
     res.redirect('/');
 });
 
-router.use('/', notLoggedIn, function (req, res, next) {
+router.use('/', function (req, res, next) {
     next();
 });
 
@@ -36,9 +36,9 @@ router.get('/signin',function (req, res, next) {
 });
 
 router.post('/signin', passport.authenticate('local.signin', {
-    successRedirect: '/user/profile',
-    failureRedirect: '/user/signin',
-    failureFlash: true
+     successRedirect: '/user/profile',
+     failureRedirect: '/user/signin',
+     failureFlash: true,
 }));
 
 module.exports = router;
@@ -46,14 +46,13 @@ module.exports = router;
 function isLoggedIn(req, res, next) {
     if(req.isAuthenticated()){
         next();
-        console.log("authenticated")
     }
     res.redirect('/');
 }
 
-function notLoggedIn(req, res, next) {
-    if(!req.isAuthenticated()){
-        next();
-    }
-    res.redirect('/');
-}
+// function notLoggedIn(req, res, next) {
+//     if(!req.isAuthenticated()){
+//         next();
+//     }
+//     res.redirect('/');
+// }
