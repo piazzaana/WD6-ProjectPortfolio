@@ -176,8 +176,17 @@ nav {
 }
 
 .nav__logo {
+/*
     max-width: 61%;
     min-width: 200px;
+*/
+    height: 33px;
+    width: 45px;
+}
+
+.footer__logo {
+    height: 55px;
+    width: 80px;
 }
 
 .nav__menu-mobile {
@@ -390,17 +399,25 @@ nav ul {
     }
 
     .subnav__menu {
-        background: #eaeaea;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        padding-top: 20px;
-        padding-left: 7.16%;
-        padding-bottom: 30px;
-        padding-right: 7.16%;
-        position: absolute;
-        left: 0;
-        top: 100%;
-        width: 100%;
+    background: #eaeaea;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-left: 1.16%;
+    padding-bottom: 30px;
+    padding-right: 7.16%;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    }
+    
+    .button_close_class{
+    border: 2px solid red;
+    height: 25px;
+    width: 32px;
+    font-weight: 900;
+    font-size: 21px;
+    color: blue;
     }
 
     .subnav__menu .menu-item-nolink {
@@ -785,16 +802,20 @@ select.quote-form-input,
 
 .quote__modal-form-submit[disabled],
 .quote-form-submit[disabled] {
-    color: #7f7f7f;
+    color: #f9f2f2;
 }
 
 .quick-quote__cta[disabled] {
-    color: #7f7f7f;
-    background-color: #25272a;
+    color: #f7ebeb;
+    background-color: #f1151b;
+    font-weight: bold;
 }
 
 .quote__modal-form-submit {
     margin-top: 12px;
+    background-color: #f1151b;
+    padding: 8px 15px;
+    
 }
 
 .header-contact__item > .fa-phone {
@@ -981,7 +1002,7 @@ select.quote-form-input,
 
 .hero--brand .hero__eyebrow,
 .hero--brand .hero__subtext {
-    color: #d71c24;
+    color: #ff0000;
 }
 
 .hero__subtext {
@@ -995,6 +1016,7 @@ select.quote-form-input,
 
 .hero--brand .hero__subtext {
     border: none;
+    color: #ff0000;
 }
 
 .left > .hero__subtext {
