@@ -7,14 +7,13 @@ class students{
 
     public function select($sql, $value=array()){
         $this->sql = $this->db->prepare($sql);
-        $result = $this->db->execute($value);
-        $data = $this->sql->fetchAll;
+       // $result = $this->db->execute($value);
+        $data = $this->sql->fetchAll();
         return $data;
     }
 
     public function add($sql, $value=array()){
-        $this->db = $this->db->prepare($sql);
-        $result = $this->db->execute($value);
+
     }
 
     public function delete(){

@@ -1,12 +1,13 @@
 <?php
+
 class AppController{
     public function __construct($urlPathParts, $config)
     {
-
-        $this->db = new PDO('mysql:dbname='.';',$config['dbuser'],$config['dbpass'],$config['dbname']);
+        $this->db = new PDO('mysql:dbname='.$config['dbname'].';',$config['dbuser'],$config['dbpass']);
         var_dump($this->db);
 
         $this->urlPathParts = $urlPathParts;
+
         if($urlPathParts[0]){
             include './controllers/'.$urlPathParts[0].'.php';
             $appcon = new $urlPathParts[0]($this);
@@ -33,6 +34,9 @@ class AppController{
         }
     }
 
+    public function inputRcv(){
+        var_dump($_POST);
+    }
     public function getView($page, $data=array())
     {
         require_once './views/'.$page.'.php';

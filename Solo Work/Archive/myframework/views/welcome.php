@@ -2,7 +2,8 @@
 
 <h3 style="color: green">Input your student's name & final grade percentage (%)</h3>
 
-<?php
-foreach ($data as $student){
-    echo $student['name'].' '.$student['grade']."<a href='#/".$student['id']."'>EDIT</a><br>";
-}
+<form method="post" action="/welcome/inputRcv">
+    <input type="text" id="student" name="student" placeholder="Name">
+    <input type="text" id="grade" name="grade" placeholder="grade">
+    <button type="submit">Submit Query</button>
+</form>

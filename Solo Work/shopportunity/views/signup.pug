@@ -1,11 +1,24 @@
 extends layout
 
 block content
+    style(type='text/css').
+        div.alert{
+            margin-top: 20px;
+        }
+        div.alert ul{
+            margin-bottom: 0;
+        }
+
     div.row
         div.col-md-4.col-md-offset-4
-            p validation errors
+            if hasErrors
+                div.alert.alert-danger
+                    ul
+                        each message in messages
+                            li=message
+
             h1 Sign Up
-            form(method='post' action='/signup')
+            form(method='post' action='/user/signup')
                 div.form-group
                     label(for='email') E-mail
                     input.form-control(type='email' id='email' name='email')

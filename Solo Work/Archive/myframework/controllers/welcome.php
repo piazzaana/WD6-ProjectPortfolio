@@ -8,7 +8,8 @@ class Welcome extends AppController {
     }
 
     public function showList(){
-        $data = $this->parent->getModel('students')->select("select * from students_table");
+        //$data = parent::getModel('students')->select("select * from students");
+        $data = $this->parent->getModel('students')->select("select * from students");
         $this->getView('welcome', $data);
     }
 }
