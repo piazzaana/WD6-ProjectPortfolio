@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    style(type='text/css').
+
+    div.row
+        div.col-sm-6.col-md-6.offset-md-3.offset-sm-3
+            h1 Checkout
+            h4="Your Total: $" + total + ".00"
+            form(action='/checkout' method='post')
+                script(src="https://checkout.stripe.com/checkout.js"
+                class="stripe-button"
+                data-key="pk_test_rmALB2lGQQER0zyeD1O6wsAu"
+                data-amount=total * 100
+                data-name="Shopportunity"
+                data-description="Test charge"
+                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                data-locale="auto"
+                data-zip-code="true")
+    script(src="https://js.stripe.com/v3/")
+    script(src='javascripts/checkout.js')
