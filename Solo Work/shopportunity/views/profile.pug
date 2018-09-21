@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    style(type='text/css').
+        .card{
+            margin-bottom: 20px;
+        }
+
+    div.row
+        div.col-sm-6.col-md-6.offset-md-3.offset-md-3
+            h1 User Profile
+            h2 My orders
+            each order in orders
+                div.card
+                    div.card-body
+                        ul.list-group
+                            each item in order.items
+                                li.list-group-item
+                                    p=item.item.title
+                                    p="$"+item.item.price+".00 each"
+                                    p="Quantity: "+item.qty
+                                    p.badge.badge-pill.badge-dark="$"+item.price+".00 total"
+                    div.card-footer.float-right='Total: $'+order.cart.totalPrice+'.00'
