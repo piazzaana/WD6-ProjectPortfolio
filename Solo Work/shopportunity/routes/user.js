@@ -3,11 +3,24 @@ const router = express.Router();
 const csrf = require('csurf');
 const passport = require('passport');
 
+const Cart = require('../models/cart');
+const Order = require('../models/order');
+
 let csrfProtection = csrf();
 router.use(csrfProtection);
 
 router.get('/profile', isLoggedIn, function (req, res, next) {
-    res.render('profile');
+    Order.find({user:req.user}, function (err, orders) {
+        if(err){
+            res.write('Error!');
+        }
+        var cart;
+        orders.forEach(function (order) {
+            cart = new Cart(order.cart);
+            order.items = cart.generateArray();
+        });
+        res.render('profile', {orders: orders});
+    });
 });
 
 router.get('/logout', isLoggedIn, function (req, res, next) {
@@ -49,7 +62,7 @@ router.post('/signin', passport.authenticate('local.signin', {
     if(req.session.oldUrl){
         var oldUrl = req.session.oldUrl;
         req.session.oldUrl = null;
-        req.redirect(oldUrl);
+        res.redirect(oldUrl);
     } else {
         res.redirect('/user/profile');
     }
