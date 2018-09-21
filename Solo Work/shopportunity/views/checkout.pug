@@ -2,20 +2,155 @@ extends layout
 
 block content
     style(type='text/css').
+        * {
+            font-family: 'Helvetica Neue', Helvetica, sans-serif;
+            font-size: 19px ;
+            font-variant: normal;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            align-items: center;
+            min-height: 100%;
+        }
+        form {
+            width: 480px;
+            margin: 50px auto;
+        }
+        label {
+            height: 35px;
+            position: relative;
+            color: #8798AB;
+            display: block;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+        label > span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-weight: 300;
+            line-height: 32px;
+            color: #8798AB;
+            border-bottom: 1px solid #586A82;
+            transition: border-bottom-color 200ms ease-in-out;
+            cursor: text;
+            pointer-events: none;
+        }
+        label > span span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: 0% 50%;
+            transition: transform 200ms ease-in-out;
+            cursor: text;
+        }
+        label .field.is-focused + span span,
+        label .field:not(.is-empty) + span span {
+            transform: scale(0.68) translateY(-36px);
+            cursor: default;
+        }
+        label .field.is-focused + span {
+            border-bottom-color: #34D08C;
+        }
+        .field {
+            background: transparent;
+            font-weight: 300;
+            border: 0;
+            color: white;
+            outline: none;
+            cursor: text;
+            display: block;
+            width: 100%;
+            line-height: 32px;
+            padding-bottom: 3px;
+            transition: opacity 200ms ease-in-out;
+        }
+        .field::-webkit-input-placeholder {
+            color: #8898AA;
+        }
+        .field::-moz-placeholder {
+            color: #8898AA;
+        }
+        /* IE doesn't show placeholders when empty+focused */
+        .field:-ms-input-placeholder {
+            color: #424770;
+        }
+        .field.is-empty:not(.is-focused) {
+            opacity: 0;
+        }
+        button {
+            float: left;
+            display: block;
+            background: #34D08C;
+            color: white;
+            border-radius: 2px;
+            border: 0;
+            margin-top: 20px;
+            font-size: 19px;
+            font-weight: 400;
+            width: 100%;
+            height: 47px;
+            line-height: 45px;
+            outline: none;
+        }
+        button:focus {
+            background: #24B47E;
+        }
+        button:active {
+            background: #159570;
+        }
+        .outcome {
+            float: left;
+            width: 100%;
+            padding-top: 8px;
+            min-height: 20px;
+            text-align: center;
+        }
+        .success, .error {
+            display: none;
+            font-size: 15px;
+        }
+        .success.visible, .error.visible {
+            display: inline;
+        }
+        .error {
+            color: #E4584C;
+        }
+        .success {
+            color: #34D08C;
+        }
+        .success .token {
+            font-weight: 500;
+            font-size: 15px;
+        }
 
-    div.row
-        div.col-sm-6.col-md-6.offset-md-3.offset-sm-3
-            h1 Checkout
-            h4="Your Total: $" + total + ".00"
-            form(action='/checkout' method='post')
-                script(src="https://checkout.stripe.com/checkout.js"
-                class="stripe-button"
-                data-key="pk_test_rmALB2lGQQER0zyeD1O6wsAu"
-                data-amount=total * 100
-                data-name="Shopportunity"
-                data-description="Test charge"
-                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                data-locale="auto"
-                data-zip-code="true")
+
+    form(action="/checkout" method="post" id="checkout-form")
+        label
+            input(name="name" class="field is-empty" placeholder="Jane Doe")
+            span
+                span Name
+
+        label
+            input(name="address" class="field is-empty" placeholder="21 Jump St")
+            span
+                span Address
+
+        label
+            div(id="card-element" class="field is-empty")
+            span
+                span Credit or debit card
+        button(type="submit")="Pay $" + total
+        <div class="outcome">
+            <div class="error" role="alert"></div>
+            <div class="success">Success! Your Stripe token is
+                <span class="token"></span>
+            </div>
+        </div>
+    </form>
+
     script(src="https://js.stripe.com/v3/")
     script(src='javascripts/checkout.js')
