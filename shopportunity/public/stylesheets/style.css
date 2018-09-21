@@ -1,0 +1,17 @@
+.card{
+    max-width: calc(100% / 3 - 10px);
+    height: auto;
+    margin: 5px;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#add{
+    float: right;
+}
+.price{
+    font-weight: bold;
+    font-size: 16px;
+}

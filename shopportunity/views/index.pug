@@ -1,0 +1,91 @@
+extends layout
+
+block content
+
+  h1= title
+  p Welcome to #{title}
+
+  div.row
+    <div class="card">
+    <img class="card-img-top" src="/images/item-1.jpg">
+    <div class="card-body">
+    <h4 class="card-title">Item title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    div.btns
+      div.price $12
+      <a href="#!" class="btn btn-success" id="add">Add to cart</a>
+    </div>
+    </div>
+
+    <div class="card">
+    <img class="card-img-top" src="/images/item-2.png">
+    <div class="card-body">
+    <h4 class="card-title">Item title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    div.btns
+      div.price $12
+      <a href="#!" class="btn btn-success" id="add">Add to cart</a>
+    </div>
+    </div>
+
+    <div class="card">
+    <img class="card-img-top" src="/images/item-3.jpg">
+    <div class="card-body">
+    <h4 class="card-title">Item title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    div.btns
+      div.price $12
+      <a href="#!" class="btn btn-success" id="add">Add to cart</a>
+    </div>
+    </div>
+  div.row
+    <div class="card">
+    <img class="card-img-top" src="/images/item-1.jpg">
+    <div class="card-body">
+    <h4 class="card-title">Item title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    div.btns
+      div.price $12
+      <a href="#!" class="btn btn-success" id="add">Add to cart</a>
+    </div>
+    </div>
+
+    <div class="card">
+    <img class="card-img-top" src="/images/item-2.png">
+    <div class="card-body">
+    <h4 class="card-title">Item title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    div.btns
+      div.price $12
+      <a href="#!" class="btn btn-success" id="add">Add to cart</a>
+    </div>
+    </div>
+
+    <div class="card">
+    <img class="card-img-top" src="/images/item-3.jpg">
+    <div class="card-body">
+    <h4 class="card-title">Item title</h4>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+    </p>
+    div.btns
+      div.price $12
+      <a href="#!" class="btn btn-success" id="add">Add to cart</a>
+    </div>
+    </div>
+  //ul
+    // each product in products
+    //   div.wrapper
+    //     each item, i in product
+    //       div.card
+    //         img.card-img-top.img-fluid(src=item.imagePath)
+    //         div.card-body
+    //           h5.card-title=item.title
+    //           p.card-text=item.description
+    //           div.price-tag
+    //             div.price="$"+item.price
+    //             a.btn.btn-success(href="/add-to-cart/"+item._id) Add to cart
