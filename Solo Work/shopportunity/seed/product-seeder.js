@@ -1,7 +1,7 @@
 const Product = require('../models/product');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost:27017/shopportunity',{ useNewUrlParser: true });
+mongoose.connect( process.env.DB_HOST +'://'+ process.env.DB_USER +':27017/shopportunity',{ useNewUrlParser: true });
 
 let products = [
     new Product({

@@ -15,8 +15,17 @@ const userRoutes = require('./routes/user');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/shopportunity',{ useNewUrlParser: true });
+mongoose.connect( process.env.DB_HOST +'://'+ process.env.DB_USER +':27017/shopportunity',{ useNewUrlParser: true });
 require('./config/passport');
+
+// Get the default connection
+var db = mongoose.connection;
+
+// Bind connection to error event (to get notification of connection errors)
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
+
+// Bind connection to connection event (to get notification of connection)
+db.once('open', () => console.log('DATABASE CONNECTED SUCCESSFULLY') );
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

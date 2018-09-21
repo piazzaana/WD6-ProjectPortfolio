@@ -1,90 +1,17 @@
-#!/usr/bin/env node
+// If the app environment is not set, we default to development
+var NODE_ENV = process.env.NODE_ENV || 'development';
 
-/**
- * Module dependencies.
- */
-
-var app = require('../app');
-var debug = require('debug')('shopportunity:server');
-var http = require('http');
-
-/**
- * Get port from environment and store in Express.
- */
-
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-var server = http.createServer(app);
-
-/**
- * Listen on provided port, on all network interfaces.
- */
-
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
-
-/**
- * Normalize a port into a number, string, or false.
- */
-
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
+// Here, we use dotenv  to load our env vars in the .env, into process.env
+if (NODE_ENV === 'development') {
+  require('dotenv').load();
 }
 
-/**
- * Event listener for HTTP server "error" event.
- */
+const app = require('../app');
+const http = require('http');
 
-function onError(error) {
-  if (error.syscall !== 'listen') {
-    throw error;
-  }
+const port = 3000;
+app.set('port', port)
 
-  var bind = typeof port === 'string'
-    ? 'Pipe ' + port
-    : 'Port ' + port;
-
-  // handle specific listen errors with friendly messages
-  switch (error.code) {
-    case 'EACCES':
-      console.error(bind + ' requires elevated privileges');
-      process.exit(1);
-      break;
-    case 'EADDRINUSE':
-      console.error(bind + ' is already in use');
-      process.exit(1);
-      break;
-    default:
-      throw error;
-  }
-}
-
-/**
- * Event listener for HTTP server "listening" event.
- */
-
-function onListening() {
-  var addr = server.address();
-  var bind = typeof addr === 'string'
-    ? 'pipe ' + addr
-    : 'port ' + addr.port;
-  debug('Listening on ' + bind);
-}
+const server = http.createServer(app);
+server.listen(port)
+server.on('listening', () => console.log('Server running on: '+port))
