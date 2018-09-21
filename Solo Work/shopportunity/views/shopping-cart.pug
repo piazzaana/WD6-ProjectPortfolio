@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    if products
+        div.row
+            div.col-sm-6.col-md-6.offset-md-3.offset-md-3
+                ul.list-group
+                    each item in products
+                        li.list-group-item
+                            strong(style='margin-right:10px')=item.item.title
+                            span.btn-success(style='margin-right:10px;padding:5px;border-radius:10px;')=item.item.price
+                            div.btn-group
+                                button.btn.btn-primary.dropdown-toggle(type='button' data-toggle='dropdown') Action
+                                    span.caret
+                                ul.dropdown-menu
+                                    li.text-center
+                                        a(href='/reduce/'+item.item._id) Reduce by 1
+                                    li.text-center
+                                        a(href='/remove/'+item.item._id) Remove all
+                            span.badge.badge-dark(style='float:right')=item.qty
+        div.row(style="margin-top:20px;")
+            div.col-sm-6.col-md-6.offset-md-3.offset-md-3
+                strong='Total: $' + totalPrice + '.00'
+        hr
+        div.row
+            div.col-sm-6.col-md-6.offset-md-3.offset-md-3
+                a.btn.btn-success(href="/checkout") Checkout
+    else
+        div.row
+            div.col-sm-6.col-md-6.offset-md-3.offset-md-3
+                h2 No items in cart

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  style(type='text/css').
+
+  h1= title
+  p Welcome to #{title}
+
+  ul
+    each product in products
+      div.wrapper
+        each item, i in product
+          div.card
+            img.card-img-top.img-fluid(src=item.imagePath)
+            div.card-body
+              h5.card-title=item.title
+              p.card-text=item.description
+              div.price-tag
+                div.price="$"+item.price
+                a.btn.btn-success(href="/add-to-cart/"+item._id) Add to cart
